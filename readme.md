@@ -11,7 +11,7 @@ The server will run on `http://localhost:3001`.
 
 ## Data Model
 
-A URL stored on the server has an `id`, `long_url`, and `short_url`. Here is a sample URL object:
+A URL stored on the server has an `id`, `long_url`, `short_url`, and `title`. Here is a sample URL object:
 
 ```js
 {
