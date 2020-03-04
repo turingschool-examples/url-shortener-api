@@ -27,6 +27,6 @@ The **long_url** is the original long format URL. The **short_url** is the short
 
 | Purpose | URL | Verb | Request Body | Sample Success Response |
 |----|----|----|----|----|
-| Get all urls |`/api/v1/urls`| GET | N/A | All urls on the server: `{urls: [{}, {}, ...]}` |
-| Add new url and get back a shortened url |`/api/v1/urls`| POST | `{long_url: <String>}` | New url that was added with the shortened url: `{id: 2, long_url: "https://images.unsplash.com/photo...", short_url: "http://localhost:3001/useshorturl/2"}` |
-| Delete existing url |`/api/v1/urls/:url_id`| DELETE | N/A | For successful deletion: No response body (only 204 status code) |
+| Get all saved urls |`/api/v1/urls`| GET | N/A | All urls on the server: `{urls: [{}, {}, ...]}` |
+| Save a new url and get back a the shortened url |`/api/v1/urls`| POST | `{long_url: <String>}` | New url that was added with the shortened url: `{id: 2, long_url: "https://images.unsplash.com/photo...", short_url: "http://localhost:3001/useshorturl/2"}` |
+| Delete existing saved url |`/api/v1/urls/:url_id`| DELETE | N/A | For successful deletion: No response body (only 204 status code) |
