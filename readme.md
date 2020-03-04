@@ -5,7 +5,7 @@ This API is used in conjunction with the URL Shortener Front End. It stores orig
 ## Setup
 
 * Clone down this repo and run `npm install`
-* Run the server by using `npm start`
+* Run the server by using `node server.js`
 
 The server will run on `http://localhost:3001`.
 
