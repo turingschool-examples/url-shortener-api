@@ -10,7 +10,8 @@ app.locals.urls = [
   {
     id: 1,
     long_url: 'https://images.unsplash.com/photo-1531898418865-480b7090470f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
-    short_url: 'http://localhost:3001/useshorturl/1'
+    short_url: 'http://localhost:3001/useshorturl/1',
+    title: 'Awesome photo'
   }
 ];
 
@@ -28,7 +29,7 @@ app.get('/api/v1/urls', (request, response) => {
 // Add an url
 app.post('/api/v1/urls', (request, response) => {
   const newURL = request.body;
-  const requiredParams = ['long_url'];
+  const requiredParams = ['long_url', 'title'];
   let missingParams = [];
 
   for (let requiredProperty of requiredParams) {
