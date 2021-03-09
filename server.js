@@ -41,7 +41,7 @@ app.post('/api/v1/urls', (request, response) => {
   if (missingParams.length) {
     return response.status(422).send({ message: `Missing ${missingParams.join(', ')} in request.` });
   } else {
-    newURL.id = app.locals.urls[app.locals.urls.length - 1].id + 1;
+    newURL.id = app.locals.urls.length === 0 ? 1 : app.locals.urls[app.locals.urls.length - 1].id + 1;
     newURL.short_url = `http://localhost:3001/useshorturl/${newURL.id}`
     app.locals.urls.push(newURL);
     return response.status(201).json(newURL);
