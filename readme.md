@@ -28,6 +28,8 @@ The **title** is any title given by the user to label the url.
 
 ## Endpoints
 
+Note - the POST request requires the header to be set: `Content-Type: "application/json"`
+
 | Purpose | URL | Verb | Request Body | Sample Success Response |
 |----|----|----|----|----|
 | Get all saved urls |`/api/v1/urls`| GET | N/A | All urls on the server: `{urls: [{}, {}, ...]}` |
